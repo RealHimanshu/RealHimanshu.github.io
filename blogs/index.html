@@ -1,0 +1,166 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Jay Godara ; Lord of App Destruction">
+      <meta name="author" content="Jay Godara">
+      <title>Jay Godara</title>
+      <link rel="stylesheet" href="../assets/css/color.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
+      <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
+      <link href="./assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="//highlightjs.org/static/demo/styles/atom-one-light.css">
+      <style>.list__title {
+         font-size: 14px;
+         line-height: 20px;
+         text-transform: uppercase;
+         font-family: Roboto Mono,monospace;
+         letter-spacing: 5px;
+         font-weight: 700;
+         color: #999;
+         margin-bottom: 40px;
+         }blockquote {
+         background-color: #dedede61;
+         font-style: italic;
+         border-left: 5px #dfdfdf solid;
+         font-size: 15px;
+         padding-left: 10px;
+         }
+         img {width: 100%}
+         a {color: #007bff}
+         .article h1,h2,h3,h4,h5,h6 {
+         font-family: Roboto Mono,monospace;
+         text-transform: uppercase;
+         font-weight: normal !important;
+         margin-top: 30px;
+         margin-bottom: 15px;
+         }
+         code{text-transform: none !important;}
+         .post-cards__info {
+         min-height: 165px;
+         }
+         .hljs{font-size: 14px}
+         [alt="CYBER_POTATO"] {
+         height: 200px;
+         width: 200px;}
+      </style>
+   </head>
+   <body onhashchange="onHashChange()">
+      <!--Main menu-->
+      <div class="menu">
+         <div class="container">
+            <div class="row">
+               <div class="menu__wrapper d-none d-lg-block col-md-12">
+                  <nav class="">
+                     <ul>
+                        <li><a href="JavaScript:b4ghome()">Blog Home</a></li>
+                        <li><a href="/">my website</a></li>
+                        <li class="pull-right">powered by <a href="/blog4git">Blog4git</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="menu__wrapper col-md-12 d-lg-none">
+                  <div class="menu__mobile-button">
+                     <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Main menu-->
+      <!-- Mobile menu -->
+      <div class="mobile-menu d-lg-none">
+         <div class="container">
+            <div class="mobile-menu__close">
+               <span><i class="mdi mdi-close" aria-hidden="true"></i></span>
+            </div>
+            <nav class="mobile-menu__wrapper">
+               <ul>
+                  <li><a href="JavaScript:b4ghome()">Blog Home</a></li>
+                  <li><a href="/">my website</a></li>
+                  <li>powered by <a href="/blog4git">Blog4git</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <!-- Mobile menu -->
+      <!--Header-->
+      <header class="background blog-header" style="background-image: url(../assets/images/img_bg_main.jpg)">
+      </header>
+      <!--Header-->
+      <!--Article-->
+      <div class="container">
+         <div class="article">
+            <div class="row">
+               <div class="col-md-12" id="b4g-section-main">
+               </div>
+            </div>
+         </div>
+         <!--Other Posts-->
+         <section id="posts" class="container section">
+         <div class="row">
+            <div class="col-md-12">
+               <h2  id="other_posts" class="section__title">Featured Posts_</h2>
+            </div>
+            <div class="col-md-12">
+               <div class="row post-cards" id="b4g-blogs-featured">
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- templates -->
+      <script type="x-templ-mustache" id="section-blog-listing">
+         <h2  id="other_posts" class="section__title">All Blogs_</h2>
+         <div class="content" id="b4g-blogs-all"></div>
+      </script>
+      <script type="x-templ-mustache" id="blog-listing-mustache">
+         {{#all}}
+           <h3 class="title">
+             <a href="#{{id}}">{{title}}</a>
+           </h3>
+           <h5>{{create}}</h5>
+           <p data-type="b4g-data-shortdesc" data-id="{{id}}"></p>
+           <hr />
+         {{/all}}
+      </script>
+      <script type="x-templ-mustache" id="featured-blog-mustache">
+         {{#featured}}
+         <div class="col-md-4">
+           <a href="#{{id}}">
+             <div class="post-cards__card">
+               <div class="post-cards__info">
+                 <p class="post-cards__date">{{create}}</p>
+                 <h3 class="post-cards_title">{{title}}</h3>
+                 <p class="post-cards_description">
+                 {{desc}}
+                 </p>
+               </div>
+             </div>
+           </a>
+         </div>
+         {{/featured}}
+      </script>
+      <script type="text/javascript">
+         var blogTitle = 'Jay\'s Blogs';
+      </script>
+      <!-- Javascript -->
+      <script src="../assets/js/jquery-2.2.4.min.js"></script>
+      <script src="../assets/js/popper.min.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
+      <script src="../assets/js/menu.js"></script>
+      <script src="../assets/js/jquery.waypoints.js"></script>
+      <script src="../assets/js/progress-list.js"></script>
+      <script src="../assets/js/section.js"></script>
+      <script src="../assets/js/portfolio-filter.js"></script>
+      <script src="../assets/js/slider-carousel.js"></script>
+      <script src="../assets/js/mobile-menu.js"></script>
+      <script src="../assets/js/mbclicker.min.js"></script>
+      <script src="../assets/js/site-btn.js"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+      <script type="text/javascript" src="//cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script type="text/javascript" src="./assets/js/app.js"></script>
+   </body>
+</html>
